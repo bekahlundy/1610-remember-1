@@ -1,7 +1,8 @@
 {
   "name": "remember",
   "dependencies": {
-    "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember": "~2.11.0",
+    "ember-cli-shims": "0.1.1",
+    "reset-scss": "^2.0.2"
   }
 }
