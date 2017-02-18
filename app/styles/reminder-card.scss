@@ -1,0 +1,50 @@
+ul {
+  display: inline-block;
+  float: left;
+  border: 1px solid black;
+  height: 500px;
+  margin: 0 0 0 20px;
+}
+
+.spec-reminder-item, .spec-reminder-warning {
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px;
+  width: 250px;
+  height: 40px
+    // &:hover {
+    //   background-color: #F8FBFD;
+    // }
+}
+
+
+.spec-reminder--title {
+  display: inline-block;
+}
+.spec-reminder--deletebtn {
+  background-color: #E7E7E7;
+  border-radius: 9px;
+  border: none;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  float:right;
+    &:hover {
+      background-color: #C2C9CD;
+      color: gray;
+    }
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+
+li a.active h3{
+  background-color: pink;
+}
+
+.please-save-me {
+  color: gray;
+}
