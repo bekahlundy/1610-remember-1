@@ -2,6 +2,11 @@
 
 <div class='all-reminders'>
   <div class='reminder-list'>
+    {{#link-to "reminders.new-reminder"}}
+    <button class='spec-reminder--new'>
+      +
+    </button>
+    {{/link-to}}
     <ul class='list'>
       {{#if model}}
         {{#each model as |reminder|}}
@@ -27,11 +32,7 @@
       {{/if}}
     </ul>
 
-    {{#link-to "reminders.new-reminder"}}
-      <button class='spec-reminder--new'>
-        ➕
-      </button>
-    {{/link-to}}
+
 
   </div>
   {{outlet}}

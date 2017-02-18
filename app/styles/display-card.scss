@@ -1,9 +1,10 @@
-.display-card {
-  // font-size: 40px;
-  border: 1px solid black;
-  display: inline-block;
-  height: 500px;
-  width: 600px;
+.reminder-card-cont{
+  background: white;
+  border-radius: 5px;
+  height: 100%;
+  flex-grow: 2;
+  margin-left: 4px;
+  margin-right: 20px;
 }
 
 .spec-reminder-card--title {
