@@ -1,34 +1,38 @@
-<h1>Reminders</h1>
+<h1 class='title'>Remind</h1>
 
-{{#link-to "reminders.new-reminder"}}
-  <button class='spec-reminder--new'>
-    +
-  </button>
-{{/link-to}}
+<div class='all-reminders'>
+  <div class='reminder-list'>
+    <ul class='list'>
+      {{#if model}}
+        {{#each model as |reminder|}}
+          <li class='spec-reminder-item reminder-item'>
+          {{#link-to "reminders.reminder-card" reminder}}
+            {{#if reminder.hasDirtyAttributes}}
+              <h3 class='spec-reminder--title please-save-me'>{{reminder.title}}</h3>
+            {{else}}
+              <h3 class='spec-reminder--title'>{{reminder.title}}</h3>
+            {{/if}}
+          {{/link-to}}
+          {{#link-to "reminders"}}
+            <button
+              class='spec-reminder--deletebtn deletebtn'
+              {{action 'removeReminder' reminder on="click"}}>
+              ⓧ
+            </button>
+          {{/link-to}}
+          </li>
+        {{/each}}
+      {{else}}
+        <p class='spec-reminder-warning'>Create a new reminder!</p>
+      {{/if}}
+    </ul>
 
-<ul>
-  {{#if model}}
-    {{#each model as |reminder|}}
-      <li class='spec-reminder-item'>
-      {{#link-to "reminders.reminder-card" reminder}}
-        {{#if reminder.hasDirtyAttributes}}
-          <h3 class='spec-reminder--title please-save-me'>{{reminder.title}}</h3>
-        {{else}}
-          <h3 class='spec-reminder--title'>{{reminder.title}}</h3>
-        {{/if}}
-      {{/link-to}}
-      {{#link-to "reminders"}}
-        <button
-          class='spec-reminder--deletebtn'
-          {{action 'removeReminder' reminder on="click"}}>
-          x
-        </button>
-      {{/link-to}}
-      </li>
-    {{/each}}
-  {{else}}
-    <p class='spec-reminder-warning'>Create a new reminder!</p>
-  {{/if}}
-</ul>
+    {{#link-to "reminders.new-reminder"}}
+      <button class='spec-reminder--new'>
+        ➕
+      </button>
+    {{/link-to}}
 
-{{outlet}}
+  </div>
+  {{outlet}}
+</div>
