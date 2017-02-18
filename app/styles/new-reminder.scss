@@ -1,0 +1,51 @@
+.new-reminder {
+  background: white;
+  border-radius: 5px;
+  height: 100%;
+  flex-grow: 2;
+  margin-left: 7px;
+}
+
+.new-reminder h2 {
+  text-align: center;
+}
+
+.new-reminder label, .reminder-card label {
+  display: block;
+}
+
+.new-reminder input, .reminder-card input {
+  width: 98%;
+  height: 30px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.new-reminder textarea, .reminder-card textarea {
+  width: 98%;
+  height: 200px;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-top: 5px;
+  resize: none;
+}
+
+.reminder-card textarea {
+  height: 100px;
+}
+
+.new-reminder form {
+  margin: 0 30px;
+}
+
+.reminder-card h2 {
+  text-align: center;
+}
+
+.reminder-card p {
+  margin-top: 30px;
+}
+
+.reminder-card {
+  padding: 0 20px;
+}
