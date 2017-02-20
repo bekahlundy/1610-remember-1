@@ -39,6 +39,9 @@ h2 {
       background-color: rgba(black, 0.8);
       color: white;
     }
+    &:focus {
+      outline: 0;
+    }
 }
 
 .buttons-center {

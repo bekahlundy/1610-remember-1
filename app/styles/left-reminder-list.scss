@@ -12,6 +12,12 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
   margin: 0px 20px;
+  &:hover {
+    color: lightgreen;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 
 .spec-reminder-item, .spec-reminder-warning {
@@ -25,6 +31,9 @@
   margin: 10px;
   box-shadow: 0px 1px grey;
   border-radius: 5px;
+  &:focus {
+    outline: 0;
+  }
 }
 
 .reminder-item:hover {
@@ -71,6 +80,9 @@
       background: none;
       color: gray;
       cursor: pointer;
+    },
+    &:focus {
+      outline: 0;
     }
 }
 
