@@ -1,4 +1,8 @@
 
+
+// .all-reminders {
+//   position: relative;
+// }
 .spec-reminder--new {
   background-color: white;
   border: none;
@@ -39,6 +43,7 @@
   height: 100%;
   text-align: center;
   margin-left: 20px;
+  overflow-y: scroll;
 }
 //joshs white  background for left side reminder list
 
@@ -62,6 +67,10 @@
     }
 }
 
+li {
+  overflow: hidden;
+}
+
 li a {
   text-decoration: none;
   color: black;
@@ -69,7 +78,7 @@ li a {
   font-weight: normal;
 }
 
-li a.active h3{
+li a.active .spec-reminder-item{
   background-color: red;
 }
 
